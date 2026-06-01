@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Design tokens ── */
+:root {
+  --radius: 6px;
+
+  /* Backgrounds */
+  --bg:      #0d0d0f;
+  --bg-1:    #141417;
+  --bg-2:    #1c1c21;
+  --bg-3:    #242429;
+  --bg-elev: #1e1e24;
+
+  /* Foreground */
+  --fg:      #f0f0f4;
+  --fg-2:    #b0b0bb;
+  --fg-3:    #6e6e7e;
+  --fg-muted:#4a4a58;
+
+  /* Border */
+  --border:        rgba(255,255,255,0.08);
+  --border-strong: rgba(255,255,255,0.16);
+
+  /* Interactive */
+  --hover:    rgba(255,255,255,0.06);
+  --selected: rgba(59,130,246,0.18);
+
+  /* Accent — cobalt blue */
+  --accent:       #3b82f6;
+  --accent-strong: #2563eb;
+  --accent-soft:   rgba(59,130,246,0.15);
+  --accent-fg:     #ffffff;
+  --accent-glow:   rgba(59,130,246,0.4);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.5);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.6);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.7);
+
+  /* Topbar / toolbar heights */
+  --topbar-h:  40px;
+  --toolbar-w: 48px;
+
+  /* Timeline */
+  --tl-track: 36px;
+  --tl-rail:  28px;
+  --tl-bg:    #111115;
+  --track-bg: #18181d;
+
+  /* shadcn compatibility (HSL fallbacks) */
+  --background: 230 12% 6%;
+  --foreground: 240 10% 94%;
+  --card: 230 12% 9%;
+  --card-foreground: 240 10% 94%;
+  --popover: 230 12% 9%;
+  --popover-foreground: 240 10% 94%;
+  --primary: 220 90% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 230 8% 16%;
+  --secondary-foreground: 240 10% 94%;
+  --muted: 230 8% 16%;
+  --muted-foreground: 240 6% 48%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 230 8% 16%;
+  --ring: 220 90% 60%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.22); }
+
+/* Drag-select text off */
+.no-select { user-select: none; }
+
+/* Panel resize handle */
+.resize-handle {
+  cursor: col-resize;
+  width: 4px;
+  flex-shrink: 0;
+  background: transparent;
+  transition: background 0.15s;
+}
+.resize-handle:hover, .resize-handle:active { background: var(--accent); }
