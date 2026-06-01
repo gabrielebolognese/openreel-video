@@ -2,16 +2,7 @@
  * Toolbar — left vertical strip with layer creation tools.
  */
 import React from "react";
-import {
-  MousePointer2,
-  Type,
-  Square,
-  Circle,
-  Film,
-  Image as ImageIcon,
-  Layers,
-  Sliders,
-} from "lucide-react";
+import { MousePointer2, Type, Square, Circle, Film, Image as ImageIcon, Layers, FileSliders as Sliders } from "lucide-react";
 import { v4 as uuid } from "uuid";
 import { useProjectStore, useMainComposition, defaultTransform } from "../../stores/project-store";
 import type { MoTextLayer, MoSolidLayer, MoShapeLayer } from "@openreel/mograph";
